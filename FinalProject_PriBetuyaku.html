@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From Design to IT</title>
+    <style>
+      body {
+        font-family: roboto;
+        display: block;
+        margin: 30px auto;
+      }
+      
+      h1 {
+        text-align: center;
+        border: 1px solid #fc709b;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 30px;
+        font-weight: 700;
+        color: #696969;
+      }
+      h2 {
+        color: #fc709b;
+        text-align: center;
+        font-size: 18px;
+        padding: 10px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      p {
+        text-align: justify;
+        color: #696969;
+        line-height: 1.5em;
+        font-size: 16px;
+        margin: 20px auto;
+      }
+      hr{
+            opacity: 0.4;
+      }
+      button {
+        display: block;
+        margin: 30px auto;
+        background: #ef5f9a;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 20px 30px;
+        border: none;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: #7d51e8;
+        cursor: pointer;
+      }
+      .container {
+        
+        background-image: linear-gradient(to top, #fffee4 0%, #ffefd3 100%);
+        border-radius: 10px;
+        width: 50%;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 40px;
+      }
+      .linkedin {
+        margin: 5px auto;
+        text-decoration: none;
+        color: #ef5f9a;
+      }
+      .portfolio {
+        font-weight: 600;
+        text-decoration: none;
+        color: #ef5f9a;
+      }
+      .linkedin:hover {
+        color: #7d51e8;
+      }
+      .portfolio:hover {
+        color: #7d51e8;
+      }
+      .footer {
+        margin: 0 auto;
+        padding: 10px 10px;
+        font-size: 13px;
+        text-align: center;
+        color: #a3a3a3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>👩‍💻 From Design to IT</h1>
+      
+      <h2>A little bit how I decided to learn coding</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/006/946/original/FinalProject_Priscilla_Betuyaku.jpg?1618083830"
+        alt="Coding"
+      />
+      <p>
+        When I was 15 I'd decided to be a
+        <strong>Graphic Designer,</strong> after waching my father working in
+        some projects at home. I'd started my Design course at the university
+        and in my last year I'd found my first job in my area. I worked as a
+        designer for 15 years, studied more, learn English and improve my
+        skills. The time was passing and the things became worse in my hometown,
+        so I decided to move to another country and start everything again.
+        <br />
+        I choose <span style="color:green;font-weight:bold">Ireland</span> as my new home, but to do it I had to step
+        back in my career and accept any type of jobs to pay my courses, bills
+        and also save money to renew my course and keep going to achieve my
+        goals. The life here as a foreign student is really hard, but better
+        than in my country.
+        <br />
+        I was studying English for the past 3 years, and I'm glad to say that
+        now I'm in the second year of
+        <strong>Computer Science,</strong> struggling a bit with some fields but
+        proud of the results that I'd achieve. <br />If you are considering to
+        change career, don't give up, <em>keep going,</em> study, practice and brief! 💪
+      </p>
+      <a
+        href="https://www.linkedin.com/in/betuyaku/"
+        target="_blank"
+        class="linkedin"
+        >👉 See more about me here</a
+      >
+      <button class="btn">🙋‍♀️ Be proud of yourself!</button>
+      <hr />
+      <p class="footer">
+        This page was developed by
+        <a
+          href="http://www.behance.net/betuyaku"
+          target="_blank"
+          class="portfolio"
+          >Priscilla Betuyaku</a
+        >
+        <hr />
+      </p>
+    </div>
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+      }
+
+      function canContact() {
+        let age = prompt("How old are you?");
+        return age >= 18;
+      }
+
+      function contact() {
+        let name = prompt("What is your name?");
+          if (canContact()) {
+          updateHeading(`Hi ${name}! Welcome to my website! 👩‍💻`);
+        } else {
+          updateHeading(`Sorry ${name}, you can't access my website! 😥`);
+        }
+      }
+      
+      let button = document.querySelector(".btn");
+      button.addEventListener("click", contact);
+    </script>
+  </body>
+</html>
